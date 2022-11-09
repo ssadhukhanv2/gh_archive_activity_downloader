@@ -59,22 +59,21 @@ This is used to format timestamps that are in strings to data time object using 
 Used for calculating time differences, for example to add some delta for example an hour to a datetime object
 * [strftime()](https://www.geeksforgeeks.org/python-strftime-function/)
 Converts datetime objects to their string representation [Formatter CheatSheet for strftime](https://strftime.org/)
-
-
-    baseline_file = '2022-11-07-0.json.gz'
-  
-    // baseline_file is a string so it's split and the first part is stored in date_part_str
-    date_part_str = baseline_file.split('.')[0]
-    print(date_part_str)
-  
-    // date_part_str is parsed to datetime using datetime.strptime()
-    date_part_parsed_to_datetime = datetime.strptime(date_part_str, '%Y-%M-%d-%H')
-    print(date_part_parsed_to_datetime)
-  
-    // add 1 hour of timedelta to date_part_parsed_to_datetime and stores it in date_time_incremented that is of time datetime
-    date_time_incremented = date_part_parsed_to_datetime + timedelta(hours=1)
-    print(date_time_incremented)
-  
-    // converts the datetime to string and stores in date_time_incremented_formatted_to_string
-    date_time_incremented_formatted_to_string = datetime.strftime(date_time_incremented, '%Y-%M-%d-%H')
-    print(date_time_incremented_formatted_to_string)
+    
+        baseline_file = '2022-11-07-0.json.gz'
+      
+        // baseline_file is a string so it's split and the first part is stored in date_part_str
+        date_part_str = baseline_file.split('.')[0]
+        print(date_part_str)
+      
+        // date_part_str is parsed to datetime using datetime.strptime()
+        date_part_parsed_to_datetime = datetime.strptime(date_part_str, '%Y-%M-%d-%H')
+        print(date_part_parsed_to_datetime)
+      
+        // add 1 hour of timedelta to date_part_parsed_to_datetime and stores it in date_time_incremented that is of time datetime
+        date_time_incremented = date_part_parsed_to_datetime + timedelta(hours=1)
+        print(date_time_incremented)
+      
+        // converts the datetime to string and stores in date_time_incremented_formatted_to_string
+        date_time_incremented_formatted_to_string = datetime.strftime(date_time_incremented, '%Y-%M-%d-%H')
+        print(date_time_incremented_formatted_to_string)
